@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" href="./index.css">
+	<link rel="icon" href="../img/tekmaclogo.png" type="image/x-icon" />
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="width=device-width , initial-scale=1 ,maximum-scale=1">
+	<title>TekMac</title>
+</head>
+<body>	
+
+		
+		<nav>
+			<input type="checkbox" id="check">
+			<label for="check" class="checkbtn">
+				<i class="fas fa-bars"></i>
+			</label>
+			<label class="logo">TEKMAC DISH TICARET</label>
+			<ul>
+				<li><a class="menu" class="active" href="/">Menu</a></li>
+				<li><a class="about" href="/about">Hakkimizda</a></li>
+				<span class="langwrap"><li class="active1"><a href="#" class="language"  language="tr">TR</a></li>
+				<li><a href="#" language="eng" class="language">ENG</a></li></span>
+			</ul>
+		</nav>
+
+		<div class="container">
+			<div class="maindiv">
+				<iframe src="https://www.google.com/maps/d/embed?mid=11QT8Uokf-m8mrYAriAeA9bdkjdCICzhn" width="600" height="400"></iframe>
+				<div>
+					<h1>ТЕКМАС DIŞ TICARET LIMITED ŞIRKETI</h1>
+					<h2 class="description">Adres:Kayabashi mah. Veysel Karani cad. <br> no: 7 A ich kapi no: 2 Bashakshehir/ İstanbul</h2>
+					<h2><a class="aelem" href="https://t.me/davron83">Telegram</a></h2>
+					<h2><a class="aelem" href="mailto:uz.real.express@mail.ru">Mail</a></h2>
+					<h2><a class="aelem" href="tel:+905061174507">tel:+905061174507"</a></h2>
+				</div>	
+			</div>	
+		</div>
+		<footer>
+			<div class="footer-content">
+				<h3>TEKMAC DISH TICARET LIMITED SHIRKETI</h3>
+				<div class="footer-bottom">
+				<p>copyright &copy;2021 tekmac designed by</p>
+			</div>
+				<ul class="socials">
+					<li><a class="ahover"style= href="https://t.me/davron83"><i class="fa fa-telegram" > Telegram</i></a></li>
+					<li><a class="ahover"href="mailto:uz.real.express@mail.ru"><i class="fa fa-envelope"> Mail</i></a></li>
+					<li><a class="ahover" href="tel:+905061174507"><i class="fa fa-phone"> Phone</i></a></li>
+				</ul>
+			</div>
+			
+		</footer>
+<script>
+	let link = document.querySelectorAll(".language")
+	let desc = document.querySelector(".description")
+	let menu = document.querySelector(".menu")
+	let about = document.querySelector(".about")
+	let langEl = document.querySelector(".langwrap")
+
+	link.forEach(el => {
+		el.addEventListener('click',(event)=>{
+			langEl.querySelector('.active1').classList.remove('active1')
+			el.classList.add('active1')
+			const attr = el.getAttribute('language')
+			desc.innerHTML = data[attr].desc
+			menu.innerHTML = data[attr].menu
+			about.innerHTML = data[attr].about
+			window.localStorage.setItem("language", attr);
+		})
+
+	})
+	var data = {
+		"eng":{
+			"desc":` Address: Kayabashi neighbourhood. Veysel Karani Street <br> no: 7 A door no: 2 Bashakshehir/ Istanbul`,
+			"menu":`Home`,
+			"about":"About"
+
+
+			
+		},
+		"tr":{
+			"desc":`Adres:Kayabashi mah. Veysel Karani Caddesi. <br> no: 7 A  kapi no: 2 Bashakshehir/ İstanbul`,
+			"menu":` Menu`,
+			"about":`Hakkimizda`
+
+		}
+	}
+
+</script>
+</body>
+</html>

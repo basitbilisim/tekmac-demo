@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" href="./index.css">
+	<link rel="icon" href="./img/tekmaclogo.png" type="image/x-icon" />
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="width=device-width , initial-scale=1 ,maximum-scale=1">
+	<title>TekMac</title>
+</head>
+<body>	
+
+		
+		<nav>
+			<input type="checkbox" id="check">
+			<label for="check" class="checkbtn">
+				<i class="fas fa-bars"></i>
+			</label>
+			<label class="logo">TEKMAC DISH TICARET</label>
+			<ul>
+				<li><a class="menu" class="act" href="/">Menu</a></li>
+				<li><a class="about" href="/about">Hakkimizda</a></li>
+				<span class="langwrap"><li class="active1"><a href="#" class="language"  language="tr">TR</a></li>
+				<li><a href="#" language="eng" class="language">ENG</a></li></span>
+			</ul>
+			
+				
+			
+				
+		</nav>
+
+		<div class="container">
+			
+			<div class="maindiv">
+				<img src="/img/import2.jpg" alt="">
+				<p class="description" >	- İlgilendiğiniz malları üreticiden bulacağız. <br>
+				- Tesisle fiyat, miktar ve garanti konusunda anlaşacağız. 	<br>
+				- Malları sevkıyattan önce kontrol edeceğiz ve tüm kargonun bütünlüğü konusunda sizi temin edeceğiz.</p>
+			</div>	
+		</div>
+		<footer>
+			<div class="footer-content">
+				<h3>TEKMAC DISH TICARET LIMITED SHIRKETI</h3>
+				<div class="footer-bottom">
+				<p>copyright &copy;2021 tekmac designed by</p>
+			</div>
+				<ul class="socials">
+					<li><a style= href="https://t.me/davron83"><i class="fa fa-telegram" > Telegram</i></a></li>
+					<li><a href="mailto:uz.real.express@mail.ru"><i class="fa fa-envelope"> Mail</i></a></li>
+					<li><a href="tel:+905061174507"><i class="fa fa-phone"> Phone</i></a></li>
+				</ul>
+			
+		</footer>
+<script>
+	let link = document.querySelectorAll(".language")
+	let desc = document.querySelector(".description")
+	let menu = document.querySelector(".menu")
+	let about = document.querySelector(".about")
+	let langEl = document.querySelector(".langwrap")
+
+	link.forEach(el => {
+		el.addEventListener('click',()=>{
+			langEl.querySelector('.active1').classList.remove('active1')
+			el.classList.add('active1')
+			const attr = el.getAttribute('language')
+			desc.innerHTML = data[attr].desc
+			menu.innerHTML = data[attr].menu
+			about.innerHTML = data[attr].about
+		})
+
+	})
+	var data = {
+		"eng":{
+			"desc":` - We will find the goods you are interested in from the manufacturer. <br>
+				- We will agree with the facility on price, quantity and warranty. <br>
+				- We will check the goods before shipment and assure you of the integrity of all cargo`,
+			"menu":`Home`,
+			"about":"About"
+
+
+			
+		},
+		"tr":{
+			"desc":`- İlgilendiğiniz malları üreticiden bulacağız. <br>
+				- Tesisle fiyat, miktar ve garanti konusunda anlaşacağız. 	<br>
+				- Malları sevkıyattan önce kontrol edeceğiz ve tüm kargonun bütünlüğü konusunda sizi temin edeceğiz. `,
+			"menu":` Menu`,
+			"about":`Hakkimizda`
+
+		}
+	}
+
+
+</script>
+</body>
+</html>
