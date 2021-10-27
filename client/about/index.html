@@ -20,12 +20,11 @@
 			<label for="check" class="checkbtn">
 				<i class="fas fa-bars"></i>
 			</label>
-			<label class="logo">TEKMAC DISH TICARET</label>
+			<label class="logo">TEKMAC DIS TICARET</label>
 			<ul>
 				<li><a class="menu" class="active" href="/">Menu</a></li>
 				<li><a class="about" href="/about">Hakkimizda</a></li>
-				<span class="langwrap"><li class="active1"><a href="#" class="language"  language="tr">TR</a></li>
-				<li><a href="#" language="eng" class="language">ENG</a></li></span>
+				
 			</ul>
 		</nav>
 
@@ -33,7 +32,7 @@
 			<div class="maindiv">
 				<iframe src="https://www.google.com/maps/d/embed?mid=11QT8Uokf-m8mrYAriAeA9bdkjdCICzhn" width="600" height="400"></iframe>
 				<div>
-					<h1>ТЕКМАС DIŞ TICARET LIMITED ŞIRKETI</h1>
+					<h1>ТЕКМАС DIS TICARET LIMITED SIRKETI</h1>
 					<h2 class="description">Adres:Kayabashi mah. Veysel Karani cad. <br> no: 7 A ich kapi no: 2 Bashakshehir/ İstanbul</h2>
 					<h2><a class="aelem" href="https://t.me/davron83">Telegram</a></h2>
 					<h2><a class="aelem" href="mailto:uz.real.express@mail.ru">Mail</a></h2>
@@ -43,7 +42,7 @@
 		</div>
 		<footer>
 			<div class="footer-content">
-				<h3>TEKMAC DISH TICARET LIMITED SHIRKETI</h3>
+				<h3>TEKMAC DIS TICARET LIMITED SIRKETI</h3>
 				<div class="footer-bottom">
 				<p>copyright &copy;2021 tekmac designed by</p>
 			</div>
@@ -56,24 +55,9 @@
 			
 		</footer>
 <script>
-	let link = document.querySelectorAll(".language")
-	let desc = document.querySelector(".description")
-	let menu = document.querySelector(".menu")
-	let about = document.querySelector(".about")
-	let langEl = document.querySelector(".langwrap")
+	
 
-	link.forEach(el => {
-		el.addEventListener('click',(event)=>{
-			langEl.querySelector('.active1').classList.remove('active1')
-			el.classList.add('active1')
-			const attr = el.getAttribute('language')
-			desc.innerHTML = data[attr].desc
-			menu.innerHTML = data[attr].menu
-			about.innerHTML = data[attr].about
-			window.localStorage.setItem("language", attr);
-		})
-
-	})
+	
 	var data = {
 		"eng":{
 			"desc":` Address: Kayabashi neighbourhood. Veysel Karani Street <br> no: 7 A door no: 2 Bashakshehir/ Istanbul`,
@@ -89,6 +73,18 @@
 			"about":`Hakkimizda`
 
 		}
+	}
+	let desc = document.querySelector(".description")
+	let menu = document.querySelector(".menu")
+	let about = document.querySelector(".about") 
+	let lang = window.localStorage.getItem("language");
+	console.log(data)
+
+
+	if(lang == "eng"){
+		desc.innerHTML = data[lang].desc
+		menu.innerHTML = data[lang].menu
+		about.innerHTML = data[lang].about
 	}
 
 </script>

@@ -20,7 +20,7 @@
 			<label for="check" class="checkbtn">
 				<i class="fas fa-bars"></i>
 			</label>
-			<label class="logo">TEKMAC DISH TICARET</label>
+			<label class="logo">TEKMAC DIS TICARET</label>
 			<ul>
 				<li><a class="menu" class="act" href="/">Menu</a></li>
 				<li><a class="about" href="/about">Hakkimizda</a></li>
@@ -36,15 +36,35 @@
 		<div class="container">
 			
 			<div class="maindiv">
-				<img src="/img/import2.jpg" alt="">
+				<img class="image-main"src="/img/import2.jpg" alt="">
 				<p class="description" >	- İlgilendiğiniz malları üreticiden bulacağız. <br>
 				- Tesisle fiyat, miktar ve garanti konusunda anlaşacağız. 	<br>
 				- Malları sevkıyattan önce kontrol edeceğiz ve tüm kargonun bütünlüğü konusunda sizi temin edeceğiz.</p>
 			</div>	
+			<div class="image-main-div">
+				<hr>
+					<h2 class="text">ISTE BAZI GORSELLER</h2>
+				<div class="image-div1">
+					<img src="/img/resim(1).jpg" alt="" class="imgresim">
+					<img src="/img/resim(2).jpg" alt="" class="imgresim">
+					<img src="/img/resim(3).jpg" alt="" class="imgresim">
+				</div>
+				<div class="image-div1">
+					<img src="/img/resim(4).jpg" alt="" class="imgresim">
+					<img src="/img/resim(5).jpg" alt="" class="imgresim">
+					<img src="/img/resim(6).jpg" alt="" class="imgresim">
+				</div>
+				<div class="image-div1">
+					<img src="/img/resim7.jpg" alt="" class="imgresim">
+					<img src="/img/resim8.jpg" alt="" class="imgresim">
+					<img src="/img/resim(9).jpg" alt="" class="imgresim">
+				</div>
+			</div>
 		</div>
+		<!-- -------------------------------------------------------------------------------------- -->
 		<footer>
 			<div class="footer-content">
-				<h3>TEKMAC DISH TICARET LIMITED SHIRKETI</h3>
+				<h3>TEKMAC DIS TICARET LIMITED SIRKETI</h3>
 				<div class="footer-bottom">
 				<p>copyright &copy;2021 tekmac designed by</p>
 			</div>
@@ -56,20 +76,35 @@
 			
 		</footer>
 <script>
+	
+	
 	let link = document.querySelectorAll(".language")
 	let desc = document.querySelector(".description")
 	let menu = document.querySelector(".menu")
 	let about = document.querySelector(".about")
+	let text = document.querySelector(".text")
 	let langEl = document.querySelector(".langwrap")
-
+	
+	
 	link.forEach(el => {
 		el.addEventListener('click',()=>{
 			langEl.querySelector('.active1').classList.remove('active1')
+			const attr = el.getAttribute('language');
+			window.localStorage.setItem('language',attr)
+			let lang = window.localStorage.getItem('language')
 			el.classList.add('active1')
-			const attr = el.getAttribute('language')
-			desc.innerHTML = data[attr].desc
-			menu.innerHTML = data[attr].menu
-			about.innerHTML = data[attr].about
+			console.log(lang == "tr")
+			if(lang == "tr"){
+				desc.innerHTML = data["tr"].desc
+				menu.innerHTML = data["tr"].menu
+				about.innerHTML = data["tr"].about
+				text.innerHTML = data["tr"].text
+			}else{
+				desc.innerHTML = data["eng"].desc
+				menu.innerHTML = data["eng"].menu	
+				about.innerHTML = data["eng"].about	
+				text.innerHTML = data["eng"].text	
+			}
 		})
 
 	})
@@ -79,7 +114,8 @@
 				- We will agree with the facility on price, quantity and warranty. <br>
 				- We will check the goods before shipment and assure you of the integrity of all cargo`,
 			"menu":`Home`,
-			"about":"About"
+			"about":"About",
+			"text":"HERE ARE SOME IMAGES",
 
 
 			
@@ -89,7 +125,8 @@
 				- Tesisle fiyat, miktar ve garanti konusunda anlaşacağız. 	<br>
 				- Malları sevkıyattan önce kontrol edeceğiz ve tüm kargonun bütünlüğü konusunda sizi temin edeceğiz. `,
 			"menu":` Menu`,
-			"about":`Hakkimizda`
+			"about":`Hakkimizda`,
+			"text":`ISTE BAZI GORSELLER`
 
 		}
 	}
