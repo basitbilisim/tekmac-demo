@@ -37,6 +37,7 @@
 
 			<div class="div-a">
 				<a class="alist" href="tel:+905061174507">Tel:+905061174507</a>
+				<a class="alist" href="tel:+905522676449">Tel:+905522676449</a>
 				<a class="alist" href="https://t.me/davron83">Telegram</a>
 				<a class="alist" href="https://wa.me/+905061174507">WhatsApp</a>
 				<a class="alist" href="mailto:uz.real.express@mail.ru">Mail</a>
@@ -60,35 +61,6 @@
 <script>
 	
 
-	
-	var data = {
-		"eng":{
-			"desc":` Address: Kayabashi neighbourhood. Veysel Karani Street <br> no: 7 A door no: 2 Bashakshehir/ Istanbul`,
-			"menu":`Home`,
-			"about":"About"
-
-
-			
-		},
-		"tr":{
-			"desc":`Adres:Kayabashi mah. Veysel Karani Caddesi. <br> no: 7 A  kapi no: 2 Bashakshehir/ İstanbul`,
-			"menu":` Menu`,
-			"about":`Hakkimizda`
-
-		}
-	}
-	let desc = document.querySelector(".description")
-	let menu = document.querySelector(".menu")
-	let about = document.querySelector(".about") 
-	let lang = window.localStorage.getItem("language");
-	console.log(data)
-
-
-	if(lang == "eng"){
-		desc.innerHTML = data[lang].desc
-		menu.innerHTML = data[lang].menu
-		about.innerHTML = data[lang].about
-	}
 
 </script>
 </body>
