@@ -26,6 +26,9 @@ select{
 	width: 120px;
 	font-size: 15px;
 	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+	-webkit-appearance: button;
+ 	 appearance: button;
+  	outline: none;
   	
 }
 option {
@@ -40,7 +43,7 @@ option {
 .nav{
 	margin-top: 7%;
 	display: flex;
-
+	margin-bottom: 7%;
 }
 .span{
 	margin-left: 2%;
