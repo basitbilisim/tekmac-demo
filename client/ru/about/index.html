@@ -22,8 +22,8 @@
 			</label>
 			<label class="logo">TEKMAC DIS TICARET</label>
 			<ul>
-				<li><a class="menu" class="active" href="/">Menu</a></li>
-				<li><a class="about" href="/about">Iletişim</a></li>
+				<li><a class="menu" class="active" href="/ru">Меню</a></li>
+				<li><a class="about" href="/about">Контакт</a></li>
 				
 			</ul>
 		</nav>
@@ -31,9 +31,9 @@
 		<div class="container">
 			<div class="maindiv">
 				<iframe src="https://www.google.com/maps/d/embed?mid=11QT8Uokf-m8mrYAriAeA9bdkjdCICzhn" width="600" height="400"></iframe>
-			</div>	
+			</div>
 			<div class="maindiv2">
-			<p>KAYABAŞI MAHALLESI. VEYSEL KARANİ CADDESI. <br> NO: 7 A İÇ KAPI NO: 2 BAŞAKŞEHİR/ İSTANBUL</p>
+			<p>РАЙОН КАЯБАШИ. ПРОСПЕКТ ВЕЙСЕЛА КАРАНИ. <br> №: 7 А ВНУТРЕННЯЯ ДВЕРЬ №: 2 БАШАКШЕХИР / İSTANBUL</p>
 
 			<div class="div-a">
 				<a class="alist" href="tel:+905061174507">Tel:+905061174507</a>
@@ -42,6 +42,7 @@
 				<a class="alist" href="mailto:uz.real.express@mail.ru">Mail</a>
 			 </div>	
 			</div>
+					
 		</div>
 		<footer>
 			<div class="footer-content">
@@ -57,39 +58,6 @@
 			</div>
 			
 		</footer>
-<script>
-	
 
-	
-	var data = {
-		"eng":{
-			"desc":` Address: Kayabashi neighbourhood. Veysel Karani Street <br> no: 7 A door no: 2 Bashakshehir/ Istanbul`,
-			"menu":`Home`,
-			"about":"About"
-
-
-			
-		},
-		"tr":{
-			"desc":`Adres:Kayabashi mah. Veysel Karani Caddesi. <br> no: 7 A  kapi no: 2 Bashakshehir/ İstanbul`,
-			"menu":` Menu`,
-			"about":`Hakkimizda`
-
-		}
-	}
-	let desc = document.querySelector(".description")
-	let menu = document.querySelector(".menu")
-	let about = document.querySelector(".about") 
-	let lang = window.localStorage.getItem("language");
-	console.log(data)
-
-
-	if(lang == "eng"){
-		desc.innerHTML = data[lang].desc
-		menu.innerHTML = data[lang].menu
-		about.innerHTML = data[lang].about
-	}
-
-</script>
 </body>
 </html>

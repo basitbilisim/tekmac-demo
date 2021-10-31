@@ -11,21 +11,39 @@
 .active1{
 	background: red;
 }
+.div-a{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+
+}
+.maindiv2{
+	background: #F7FBF2;
+}
+.maindiv2 p{
+	text-align: center;
+}
+.alist{
+	color: black;
+	text-decoration: underline;
+}
+.maindiv{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
 
 iframe{
 	margin-left: 100px ;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-.maindiv div{
-	margin-top: 100px;
-	margin-left: 100px;
-}
+
 .aelem{
 	color: #5DADE2;
 }
 body{
-	background: #909497;
 	font-family: montserrat;
 }
 .container p {
@@ -172,21 +190,14 @@ a.active,.ahover:hover{
 	.footer-content {
 		padding: 0;
 	}
-	.maindiv div{
-		margin-top: 20px;
-		margin-left: 20px;
-	}
+	
 	iframe{
 		margin-left: 2px;
-		width: 60%;
-		height: 50%;
+		width: 100%;
+		height: 80%;
+		margin: 0;
 	}
-	.maindiv h1{
-		font-size: 15px;
-	}
-	.maindiv h2{
-		font-size: 10px;
-	}
+	
 	.checkbtn{
 		display: block;
 	}
@@ -220,40 +231,23 @@ a.active,.ahover:hover{
 	.maindiv p{
 		font-size: 13px;
 	}
+	.maindiv{
+		width: 100%;
+		height: 300px;
+		padding: 0;
+	}
 	
 }
-
-/*section {
-	background: url(img/import.jpg) no-repeat;
-	background-size: cover;
-	height: calc(100vh - 80px);
-	width: calc(60%);
-	display: block;
-	margin: auto;
-}*/
-
-
-
-
-
-
-
-
 
 
 .container {
 	width: 96%;
 	margin-left: auto;
 	margin-right: auto;
-	background: #909497;	
+	background: white;
 }
 
-.maindiv{
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	text-align: center;
-}
+
 p{
 
 	font-size: 20px;

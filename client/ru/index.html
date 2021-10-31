@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" href="./index.css">
+	<link rel="icon" href="/img/tekmaclogo.png" type="image/x-icon" />
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="width=device-width , initial-scale=1 ,maximum-scale=1">
+	<title>TekMac</title>
+</head>
+<body>	
+	<!-- ---------------------------ru----------------------------- -->
+		
+		<nav>
+			<input type="checkbox" id="check">
+			<label for="check" class="checkbtn">
+				<i class="fas fa-bars"></i>
+			</label>
+			<label class="logo">TEKMAC DIS TICARET</label>
+			<ul>
+				<li><a class="menu" class="act" href="/">меню</a></li>
+				<li><a class="about" href="/ru/about">Контакт</a></li>
+				<span class="box">
+					<select name="Language" id="langSelector" onclick="loadlang()">
+						<option selected="false" value="" disabled="disabled" >Language</option>
+						<option href="/tr" id="turkey" value="tr"><button>TR</button></option>
+						<option  id="english" value="eng">ENG</option>
+						<option  id="ruskiy" value="ru">RU</option>
+					</select>
+				</span>
+			</ul>
+				
+		</nav>
+
+
+		<div class="container">
+			
+			<div class="maindiv">
+				<img class="image-main"src="/img/import2.jpg" alt="">
+				<p class="description">TEKMAC FOREIGN TRADE - гарантия вашего бизнеса. У нас есть многолетний опыт экспорта и импорта между Турцией и Узбекистаном.
+				Мы найдем нужный вам товар от нужного производителя и доставим вам.
+				Свяжитесь с нами, если вы ищете надежного и постоянного партнера.</p>
+			</div>
+			<div class="posit">
+			<a class="whatsapp" href="https://wa.me/+905061174507">WhatsApp</a>
+			</div>
+			<div class="nav">
+				<span class="span">
+					<img src="/img/kalite.png" alt="">
+					<h2 class="kalite">Качественный</h2>
+					<p>В предоставляемых нами услугах мы производим или сотрудничаем с <br>
+					Первое и самое главное условие для всех товаров - это качество. Экспорт и импорт <br>
+					Вся производимая нами продукция соответствует международным стандартам качества.</p>
+				</span>
+				<span class="span">
+					<img src="/img/guven.jpg" alt="">
+					<h2 class="guven">Доверять</h2>
+					<p>«Доверие» занимает очень важное место в международной торговле. <br>
+					Мы ведем юридические и экономические отношения со всеми письменными соглашениями и правилами <br>
+					деловая этика, такая как уважение, доверие, забота и доверие <br>
+					Мы ассимилирующая компания.</p>
+				</span>
+				<span class="span">
+					<img src="/img/istikrar.jpg" alt=""> 
+					<h2 class="istikrar" >Стабильность</h2>
+					<p>Не только в сегодняшних условиях, но сегодня, как было вчера и <br>
+					все наши обязательства перед партнерами и деловыми партнерами завтра <br>
+					Мы и дальше будем его выполнять полностью, полностью и самым правильным образом</p>
+				</span>
+				<span id="bug_span" class="span" >
+					<img src="/img/memnuniyet.jpg" alt="">
+					<h2 class="memnuniyet">Удовлетворение</h2>
+					<p>Безусловное удовлетворение потребностей клиентов в качестве основного принципа <br> Итого
+					Постоянное удовлетворение потребностей клиентов за счет применения принципов управления качеством
+					мы делаем.</p>
+				</span>
+			</div>	
+			
+			<div class="image-main-div">
+				<div class="image-div1">
+					<img src="/img/resim(1).jpg" alt="" class="imgresim">
+					<img src="/img/resim(2).jpg" alt="" class="imgresim">
+				</div>
+				<div class="image-div1">
+					<img src="/img/resim7.jpg" alt="" class="imgresim">
+					<img src="/img/resim8.jpg" alt="" class="imgresim">
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="footer-content">
+				<h3>TEKMAC DIS TICARET LIMITED SIRKETI</h3>
+				<div class="footer-bottom">
+				<p>copyright &copy;2021 tekmac designed by</p>
+			</div>
+				<ul class="socials">
+					<li><a style= href="https://t.me/davron83"><i class="fa fa-telegram" > Telegram</i></a></li>
+					<li><a href="mailto:uz.real.express@mail.ru"><i class="fa fa-envelope"> Mail</i></a></li>
+					<li><a href="tel:+905061174507"><i class="fa fa-phone"> Phone</i></a></li>
+				</ul>
+			
+		</footer>
+<script>
+	
+	
+	function loadlang(){
+		
+			
+		
+		let lng = document.getElementById("langSelector").value
+		
+		switch(lng){
+			case "eng":
+				window.location.href = '/eng'
+			break;
+			case "ru":
+				window.location.href = "/ru"
+			break;
+			case "tr":
+				window.location.href = "/tr"
+			break;
+		
+		}
+
+	}
+
+
+</script>
+</body>
+</html>

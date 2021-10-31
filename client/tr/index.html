@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 	<link rel="stylesheet" href="./index.css">
-	<link rel="icon" href="./img/tekmaclogo.png" type="image/x-icon" />
+	<link rel="icon" href="/img/tekmaclogo.png" type="image/x-icon" />
 	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -23,9 +23,9 @@
 			<label class="logo">TEKMAC DIS TICARET</label>
 			<ul>
 				<li><a class="menu" class="act" href="/">Menu</a></li>
-				<li><a class="about" href="/about">Iletişim</a></li>
+				<li><a class="about" href="/tr/about">Iletişim</a></li>
 				<select name="Language" id="langSelector" onclick="loadlang()">
-					<option class="opt" selected="false" value="" disabled="disabled" >Language</option>
+					<option selected="false" value="" disabled="disabled" >Language</option>
 					<option href="/tr" id="turkey" value="tr"><button>TR</button></option>
 					<option  id="english" value="eng">ENG</option>
 					<option  id="ruskiy" value="ru">RU</option>
@@ -108,9 +108,8 @@
 	
 	function loadlang(){
 		
-			
+		let lng = document.getElementById("langSelector").value	
 		
-		let lng = document.getElementById("langSelector").value
 		
 		switch(lng){
 			case "eng":
@@ -122,11 +121,38 @@
 			case "tr":
 				window.location.href = "/tr"
 			break;
-		
+			
 		}
 
 	}
 	var data = {
+		"eng":{
+			"menu":`Home`,
+			"about":"Contact",
+			"desc":"TEKMAC FOREIGN TRADE is the guarantee of your business. We have many years of experience in exporting and importing between Turkey and Uzbekistan.We will find the product you want from the right manufacturer and deliver it to you.Contact us if you are looking for a reliable and permanent partner.",
+			"kalite":"Quality",
+			"guven":"Trust",
+			"istikrar":`Stability`,
+			"memnuniyet":"Satisfaction"
+		},
+		"tr":{
+			"menu":` Menu`,
+			"about":`Iletişim`,
+			"desc":"TEKMAC DIŞ TİCARET işinizin garantisidir. Türkiye ve Özbekistan arasında ihracat ve ithalat konusunda uzun yıllara dayanan deneyime sahibiz.İstediğiniz ürünü doğru üreticiden bulup size teslim edeceğiz.Güvenilir ve kalıcı bir ortak arıyorsanız bizimle iletişime geçin.",
+			"kalite":"Kalite",
+			"guven":"Güven",
+			"istikrar":"Istikrar",
+			"memnuniyet":"Memnuniyet"
+
+		},
+		"ru":{
+			"menu":`меню`,
+			"about":`Контакт `,
+				"kalite":"Качественный",
+				"guven":"Доверять",
+				"istikrar":"Стабильность",
+				"memnuniyet":"Удовлетворение"
+		}
 	}
 
 

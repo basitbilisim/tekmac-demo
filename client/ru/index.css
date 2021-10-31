@@ -8,21 +8,6 @@
 	list-style:none ;
 	box-sizing: border-box;
 }
-.posit{
-	position: sticky;
-	width: 15%;
-	padding: 10px;
-	left:95%;
-	top: 90%;
-	background: green;
-}
-
-.whatsapp{
-	color: white;
-}
-.image-main-div{
-	padding-top: 100px;
-}
 select{
 	background-color: #5B656B;
 	color: white;
@@ -32,10 +17,25 @@ select{
 	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
   	
 }
+.image-main-div{
+	padding-top: 100px;
+}
 option {
 	background-color: white;
 	color: black;
 	font-size: 15px;
+}
+
+.posit{
+	position: sticky;
+	width: 15%;
+	padding: 10px;
+	left:95%;
+	top: 90%;
+	background: green;
+}
+.whatsapp{
+	color: white;
 }
 
 .nav{
@@ -313,6 +313,13 @@ nav ul li a{
 	display: flex;
 	justify-content: space-around;
 	}
+	option {
+	width: 20vw;
+	background-color: white;
+	color: black;
+	font-size: 10px;
+	}
+
 	
 }
 

@@ -16,10 +16,6 @@
 	top: 90%;
 	background: green;
 }
-
-.whatsapp{
-	color: white;
-}
 .image-main-div{
 	padding-top: 100px;
 }
@@ -36,6 +32,9 @@ option {
 	background-color: white;
 	color: black;
 	font-size: 15px;
+}
+.whatsapp{
+	color: white;
 }
 
 .nav{
@@ -312,6 +311,12 @@ nav ul li a{
 	.image-div1{
 	display: flex;
 	justify-content: space-around;
+	}
+	option {
+	width: 20vw;
+	background-color: white;
+	color: black;
+	font-size: 10px;
 	}
 	
 }

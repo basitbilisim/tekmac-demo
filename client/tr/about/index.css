@@ -8,100 +8,49 @@
 	list-style:none ;
 	box-sizing: border-box;
 }
-.posit{
-	position: sticky;
-	width: 15%;
-	padding: 10px;
-	left:95%;
-	top: 90%;
-	background: green;
-}
-
-.whatsapp{
-	color: white;
-}
-.image-main-div{
-	padding-top: 100px;
-}
-select{
-	background-color: #5B656B;
-	color: white;
-	height: 50px;
-	width: 120px;
-	font-size: 15px;
-	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
-  	
-}
-option {
-	background-color: white;
-	color: black;
-	font-size: 15px;
-}
-
-.nav{
-	margin-top: 7%;
+.div-a{
 	display: flex;
-
-}
-.span{
-	margin-left: 2%;
-}
-#bug_span{
-	margin-right: 2%;
-}
-.span p{
-	margin-left: auto;
-	font-size: 18px;
-}
-
-
-.span h2{
+	flex-direction: column;
 	text-align: center;
-	padding-bottom: 10px;
-	margin-bottom: 10px;
-	border-bottom: 4px solid blue;
+
 }
-.span img{
-	width: 90%;
-	height: 40%;
-	margin-left: 4%;
-	
+.maindiv2{
+	background: #F7FBF2;
 }
-.image-main-div h2{
+.maindiv2 p{
 	text-align: center;
-	margin-bottom: 1%;
-	margin-top: 2%;
-}
-.image-main{
-	margin-top: 5%;
-	margin-left: 50px;
-}
-.image-div1{
-	display: flex;
-	justify-content: space-around;
-}
-.imgresim{
-	
-	height: 250px;
-	width: 30%;
-	margin-bottom: 2%;
 }
 
 .active1{
 	background: red;
 }
-.description {
-	width: 50%;
-	height: 30%;
-	margin-left: 3%;
-	margin-top: 200px;
+.alist{
+	color: black;
+	text-decoration: underline;
 }
-.language:last-child{
+.maindiv{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+iframe{
+	margin-left: 100px ;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.aelem{
+	color: #5DADE2;
 }
 body{
 	font-family: montserrat;
 }
-
+.container p {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
 
 footer{
 	background:#2c3e50  ;
@@ -115,7 +64,7 @@ footer{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	flex-direction: column;
+	flex-direction: flex-direction: column;;
 	text-align: center;
 }
 .footer-content h3 {
@@ -152,7 +101,9 @@ footer{
 }
 img{
 	width: 40%;
-	
+	display: block;
+	margin: auto;
+	margin-left: 100px;
 	margin-top: 10px;
 	margin-bottom: 20px;
 }
@@ -182,6 +133,9 @@ nav ul li{
 	line-height: 80px;
 	margin: 0 5px;
 }
+.about{
+	background: black;
+}
 nav ul li a{
 	color: white;
 	font-size: 17px;
@@ -190,10 +144,7 @@ nav ul li a{
 	text-transform:uppercase ;
 
 }
-.menu{
-	background: black;
-}
-.active,a:hover{
+a.active,.ahover:hover{
 	background: black ;
 	transition: .5s;
 }
@@ -209,7 +160,6 @@ nav ul li a{
 #check {
 	display: none;
 }
-/*-------------------------------------------------------------------------------------------------------*/
 @media (max-width: 952px){
 	label.logo{
 		font-size: 15px;
@@ -227,32 +177,6 @@ nav ul li a{
 	}
 }
 @media (max-width: 850px){
-	.nav{
-	margin-top: 7%;
-	display: block;
-
-	}
-	.posit{
-	position: sticky;
-	width: 30%;
-	padding: 10px;
-}
-	.span h2{
-	text-align: center;
-	padding-bottom: 10px;
-	margin-bottom: 10px;
-	border: none;
-	}
-	.image-main{
-	width: 100%;
-	margin-left: 2%;
-	margin-left: auto;
-	margin: auto;
-	}
-	.maindiv{
-		flex-direction: column;
-	}
-
 	footer{
 		padding: 0;
 	}
@@ -267,7 +191,14 @@ nav ul li a{
 	.footer-content {
 		padding: 0;
 	}
-
+	
+	iframe{
+		margin-left: 2px;
+		width: 100%;
+		height: 80%;
+		margin: 0;
+	}
+	
 	.checkbtn{
 		display: block;
 	}
@@ -300,34 +231,25 @@ nav ul li a{
 	}
 	.maindiv p{
 		font-size: 13px;
-		margin-top: 10px;
-		width: 90%;
 	}
-	.imgresim{
-	width: 30%;
-	height:80px;
-	margin: 0;
-	margin-bottom: 2%;
+	.maindiv{
+		width: 100%;
+		height: 300px;
+		padding: 0;
 	}
-	.image-div1{
-	display: flex;
-	justify-content: space-around;
-	}
+	
 	
 }
 
+
 .container {
-	width: 98%;
+	width: 96%;
 	margin-left: auto;
 	margin-right: auto;
-	border: 1px solid white;
+	background: white;
 }
-hr{
-	background: black;
-}
-.maindiv{
-	display: flex;
-}
+
+
 p{
 
 	font-size: 20px;
