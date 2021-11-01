@@ -24,11 +24,11 @@
 			<ul>
 				<li><a class="menu" class="act" href="/">Menu</a></li>
 				<li><a class="about" href="/about">Iletişim</a></li>
-				<select name="Language" id="langSelector" onclick="loadlang()">
+				<select name="Language" id="dynamic_select" >
 					<option class="opt" selected="false" value="" disabled="disabled" >Language</option>
-					<option href="/tr" id="turkey" value="tr"><button>TR</button></option>
-					<option  id="english" value="eng">ENG</option>
-					<option  id="ruskiy" value="ru">RU</option>
+					<option id="turkey" value="/tr"><button>TR</button></option>
+					<option  id="english" value="/eng">ENG</option>
+					<option  id="ruskiy" value="/ru">RU</option>
 					
 				</select>
 			</ul>
@@ -94,31 +94,22 @@
 				</ul>
 			
 		</footer>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 <script>
 	
 	
-	function loadlang(){
-		
-			
-		
-		let lng = document.getElementById("langSelector").value
-		
-		switch(lng){
-			case "eng":
-				window.location.href = '/eng'
-			break;
-			case "ru":
-				window.location.href = "/ru"
-			break;
-			case "tr":
-				window.location.href = "/tr"
-			break;
-		
-		}
-
-	}
-	var data = {
-	}
+	$(function(){
+      // bind change event to select
+      $('#dynamic_select').on('change', function () {
+          var url = $(this).val(); // get selected value
+          if (url) { // require a URL
+              window.location = url; // redirect
+          }
+          return false;
+      });
+    });
+	
 
 
 </script>
