@@ -235,10 +235,14 @@ nav ul li a{
 
 	}
 	.posit{
-	position: sticky;
-	width: 30%;
-	padding: 10px;
-}
+		position: sticky;
+		width: 30%;
+		padding: 10px;
+	}
+	.span p{
+		font-size: 10px;
+		margin-left: 15px;
+	}
 	.span h2{
 	text-align: center;
 	padding-bottom: 10px;

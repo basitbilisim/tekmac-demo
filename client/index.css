@@ -271,6 +271,10 @@ nav ul li a{
 	.footer-content {
 		padding: 0;
 	}
+	.span p{
+		font-size: 10px;
+		margin-left: 15px;
+	}
 
 	.checkbtn{
 		display: block;
